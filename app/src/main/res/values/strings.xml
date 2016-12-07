@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Swiming Pool</string>
+    <string name="signin">Đăng nhập</string>
+    <string name="sign">Đăng kí</string>
+    <string name="input_userName">Tài khoản</string>
+    <string name="input_passWord">Mật khẩu</string>
+    <string name="input_email">Nhập Email</string>
+
+    <string name="month_prompt">Choose a country</string>
+
+    <string-array name="month_arrays">
+        <item>January</item>
+        <item>Febuary</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="gender_prompt">Choose a country</string>
+
+    <string-array name="gender_arrays">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Diffrent</item>
+    </string-array>
+</resources>

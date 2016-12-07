@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PoolSwiming</string>
+    <string name="signin">Đăng nhập</string>
+    <string name="sign">Đăng kí</string>
+    <string name="input_userName">Nhập tài khoản</string>
+    <string name="input_passWord">Nhập mật khẩu</string>
+    <string name="input_email">Nhập Email</string>
+</resources>

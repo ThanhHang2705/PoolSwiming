@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#73bbff">
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="100dp"
+        android:text="Swimming Pool"
+        android:textSize="35sp"
+        android:textColor="#fff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/txt_baoloi"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:textSize="15sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:text="Tài Khoản hoặc mật khẩu không đúng :("
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:background="#bdd9df"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:src="@drawable/user"
+            android:layout_gravity="center"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/input_userName"
+            android:inputType="text"
+            android:id="@+id/userName"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:background="#bdd9df"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:src="@drawable/key"
+            android:layout_gravity="center"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/input_passWord"
+            android:inputType="textPassword"
+            android:id="@+id/passWord"/>
+
+
+    </LinearLayout>
+    <Button
+        android:background="@drawable/selector_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/signin"
+        android:layout_margin="10dp"
+        android:id="@+id/signInBtn"
+        />
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp"
+        android:paddingLeft="5dp"
+        android:text="Đăng nhập bằng tài khoản khác "
+        android:textColor="#fff"
+        android:textSize="15dp"/>
+
+    <LinearLayout
+        android:background="#ccc"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="60dp"
+        >
+        <ImageView
+            android:src="@drawable/facebook1"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:src="@drawable/google_plus"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView" />
+
+        <ImageView
+            android:src="@drawable/twitter"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2" />
+
+        <ImageView
+            android:src="@drawable/blogger"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <TextView
+
+        android:id="@+id/txt_dangki"
+        android:text="Đăng kí"
+        android:textColor="@drawable/selector_text"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

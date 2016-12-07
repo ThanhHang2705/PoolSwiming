@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:background="#73bbff"
+    tools:context="bacdaibang.poolswiming.RegisterActivity">
+
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="user name"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:gravity="bottom"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+        <EditText
+            android:paddingLeft="10dp"
+            android:background="@drawable/border"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Create a password"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:gravity="bottom"
+        android:layout_gravity="center_vertical"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+        <EditText
+            android:paddingLeft="10dp"
+            android:background="@drawable/border"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:gravity="bottom"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Confirm your password"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:layout_gravity="center_vertical"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+        <EditText
+            android:paddingLeft="10dp"
+            android:background="@drawable/border"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:gravity="bottom"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Birthday"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:layout_gravity="center_vertical"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+        <EditText
+            android:paddingLeft="10dp"
+            android:background="@drawable/border"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:hint="day"/>
+
+        <Spinner
+            android:background="@drawable/border"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:entries="@array/month_arrays"
+            android:prompt="@string/month_prompt" />
+        <EditText
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/border"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:hint="year"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:gravity="bottom"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Gender"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:layout_gravity="center_vertical"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:background="@drawable/border"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:entries="@array/gender_arrays"
+            android:prompt="@string/gender_prompt" />
+
+    </LinearLayout>
+
+    <TextView
+        android:gravity="bottom"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Your email address"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:layout_gravity="center_vertical"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+        <EditText
+            android:paddingLeft="10dp"
+            android:background="@drawable/border"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+   <TextView
+       android:paddingTop="5dp"
+       android:text="Khi bạn ấn đăng kí tức là bạn đã đồng ý với các điều khoản và chính sách của Swimming Pools"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_dki2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_marginTop="10dp"
+        android:text="Đăng kí"
+        android:background="@drawable/selector_button"/>
+</LinearLayout>
