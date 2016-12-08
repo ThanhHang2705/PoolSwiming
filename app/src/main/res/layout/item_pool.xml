@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="130dp">
     <TableRow android:layout_width="fill_parent"
         android:background="@drawable/border"
         android:minHeight="250px" android:layout_height="wrap_content">
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:orientation="vertical"
-            android:layout_width="110dp"
-            android:layout_height="match_parent"
+            android:layout_width="180dp"
+            android:layout_height="110dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp">
 
             <ImageView
+                android:src="@drawable/thanh_xuan"
                 android:adjustViewBounds="true"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -27,8 +28,8 @@
             android:layout_weight="1"
             android:orientation="vertical">
             <TextView
-                android:text="name"
-                android:textColor="#fff"
+                android:text="Bể Bơi club M"
+                android:textColor="#f40808"
                 android:textSize="20sp"
                 android:id="@+id/name"
                 android:layout_height="wrap_content"
@@ -36,27 +37,27 @@
             <TextView
                 android:textSize="20sp"
                 android:id="@+id/diachi"
-                android:text="dia chi"
-                android:textColor="#fff"
+                android:text="Thanh Xuân Hà Nội"
+                android:textColor="#f40808"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content" />
             <TextView
                 android:textSize="20sp"
                 android:id="@+id/giave"
-                android:text="giave"
-                android:textColor="#fff"
+                android:text="giá vé : 10000đ/lượt"
+                android:textColor="#f40808"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content" />
             <TextView
                 android:textSize="20sp"
                 android:id="@+id/rating"
-                android:text="rating"
-                android:textColor="#fff"
+                android:text="Rating : 8 điểm "
+                android:textColor="#f40808"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content" />
             <Button
                 android:layout_gravity="center"
-                android:background="@drawable/border"
+                android:background="@drawable/selector_button"
                 android:text="Đặt vé"
                 android:textSize="20sp"
                 android:id="@+id/datve"

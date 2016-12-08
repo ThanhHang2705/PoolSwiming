@@ -36,7 +36,7 @@ public class Adapter_Search extends BaseAdapter{
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         LayoutInflater mInflate = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View v = mInflate.inflate(R.layout.item_search,viewGroup,false);
+        View v = mInflate.inflate(R.layout.item_pool,viewGroup,false);
         return v;
     }
 }

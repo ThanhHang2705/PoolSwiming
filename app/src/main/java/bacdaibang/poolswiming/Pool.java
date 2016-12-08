@@ -20,6 +20,18 @@ public class Pool {
         this.rating = rating;
     }
 
+    public Pool(String name, String location, int cost, float rating) {
+        this.name = name;
+        this.location = location;
+        this.cost = cost;
+        this.rating = rating;
+    }
+
+    public Pool(String location, int cost) {
+        this.location = location;
+        this.cost = cost;
+    }
+
     public int getId() {
         return id;
     }

@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 import static bacdaibang.poolswiming.R.id.txt_dangki;
 
@@ -19,7 +22,8 @@ public class Activity_SignIn extends AppCompatActivity implements View.OnClickLi
     Button btn_dangNhap;
     TextView txt_dangKi;
     TextView txt_baoloi;
-
+    ArrayList<String>usernameValidate = new ArrayList<>();
+    ArrayList<String> passwordValidate= new ArrayList<>();
 
 
     @Override
@@ -34,6 +38,21 @@ public class Activity_SignIn extends AppCompatActivity implements View.OnClickLi
         txt_dangKi.setOnClickListener(this);
         txt_baoloi = (TextView) findViewById(R.id.txt_baoloi);
         txt_baoloi.setVisibility(View.INVISIBLE);
+        // Một lần phải nhập cùng lúc không sẽ lỗi
+        usernameValidate.add("tuan");
+        passwordValidate.add("12345");
+
+
+        try {
+        Intent callerIntent = getIntent();
+        Bundle packageFromCaller = callerIntent.getBundleExtra("taikhoan");
+        String name = packageFromCaller.getString("1");
+        String pass = packageFromCaller.getString("2");
+        usernameValidate.add(name);
+        passwordValidate.add(pass);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -41,7 +60,8 @@ public class Activity_SignIn extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.signInBtn:
-                if(userName.getText().toString().equals("tuan") && password.getText().toString().equals("12345")){
+                if(checkValidate(userName.getText().toString(),password.getText().toString())){
+                    Toast.makeText(this, "Đặt vé thành công ", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(Activity_SignIn.this,MainActivity.class));
                 }else{
                     txt_baoloi.setVisibility(View.VISIBLE);
@@ -55,7 +75,7 @@ public class Activity_SignIn extends AppCompatActivity implements View.OnClickLi
                     public void run()
                     {
                         try {
-                            sleep(2000);
+                            sleep(1000);
                         } catch (Exception e) {
 
                         }
@@ -71,9 +91,15 @@ public class Activity_SignIn extends AppCompatActivity implements View.OnClickLi
         }
 
     }
-
-    protected void onPause(){
-        super.onPause();
-        finish();
+    public boolean checkValidate(String usernameInput,String passwordInput) {
+        for (int i = 0; i < usernameValidate.size(); i++) {
+            if (usernameValidate.get(i).equals(usernameInput)) {
+                if (passwordValidate.get(i).equals(passwordInput)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
+
 }

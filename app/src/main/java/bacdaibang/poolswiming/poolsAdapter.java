@@ -68,8 +68,6 @@ public class poolsAdapter extends BaseAdapter {
         giave.setText("Giá vé: "+ pool.getCost()+" VNĐ");
         rating.setText("Đánh giá: "+ pool.getRating()+" Điểm");
 
-        // từ đây hất lên t viết, k cần xem :3
-        // dịch từng dòng càng tốt :(
         InputStream in =null;
         Bitmap bmp=null;
 
@@ -100,7 +98,6 @@ public class poolsAdapter extends BaseAdapter {
                 Intent mIntent = new Intent(BROADCAST_DATVE);
                 mIntent.putExtra(EXTRA_DATVE_POOLID,pool.getId());
                 mcontext.sendBroadcast(mIntent);
-
             }
         });
 

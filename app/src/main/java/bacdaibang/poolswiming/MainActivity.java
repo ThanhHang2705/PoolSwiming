@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
     BroadcastReceiver mBroadcastReceiver;
     poolsAdapter adapter;
     List<Pool> mPools = new ArrayList<>();
-
     List<String> mSearch = new ArrayList<>();
+
 
     ListView mListView;
     Button mButtonSearch;
@@ -52,6 +52,15 @@ public class MainActivity extends AppCompatActivity {
         mListView=(ListView)findViewById(R.id.list_pool);
         mAutoSearch=(AutoCompleteTextView)findViewById(R.id.search_pool);
         mButtonSearch = (Button)findViewById(R.id.btn_search);
+
+        mPools.add(new Pool("Bể Bơi Hè","Thanh Xuân", 20000,6.5f));
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                startActivity(new Intent(MainActivity.this,Activity_SignIn.class));
+            }
+        });
 
         mButtonSearch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,12 +126,14 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+
         mAdapterSearch = new Adapter_Search(this,mSearch);
         String[] arr = new String[mSearch.size()];
         mSearch.toArray(arr);
         ArrayAdapter<String> adt = new ArrayAdapter<>(MainActivity.this,android.R.layout.simple_list_item_1,arr);
         mAutoSearch.setAdapter(adt);
         sendBroadcast(new Intent(BOADCAST_PREPARED_DATA));
+
     }
 
     @Override
@@ -132,4 +143,5 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+
 }
